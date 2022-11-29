@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Please input your login name and password</title>
+    <link rel="stylesheet" type="text/css" href="css/Airview.css">
 </head>
 <body>
-这是springboot的启动页面
+<div class="main">
+    <div class="app-wrap">
+        <div class="logo">
+            <p>欢迎来到航班管家</p>
+        </div>
+        <ul class="menu-h">
+            <li class="curr"><span>数据业务</span></li>
+            <li class="curr"><span>航线网络图</span></li>
+            <li class="curr"><span>关于我们</span></li>
+        </ul>
+    </div>
+    <div class="sss">
+        <button id="select" onclick="display()">查询所有数据</button>
+    </div>
+    <div class="main-table">
+        <table class="table">
+            <th>
+            <td>航班号</td>
+            <td>航空公司</td>
+            <td>飞机型号</td>
+            <td>起飞地点</td>
+            <td>到达地点</td>
+            <td>经停</td>
+            <td>计划起飞时间</td>
+            <td>实际起飞时间</td>
+            <td>计划到达时间</td>
+            <td>实际到达时间</td>
+            <td>航站楼</td>
+            <td>值机柜台</td>
+            </th>
+        </table>
+    </div>
+</div>
 </body>
+<script type="text/javascript" src="/js/jQuery3.6.1.js"></script>
+<script type="text/javascript" src="/js/Airview.js"></script>
 </html>

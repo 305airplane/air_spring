@@ -16,9 +16,9 @@ public class AirController {
     //将Service注入Web层
     @Resource
     AirService airService;
-//    //映射到web页面loginView.html
-//    @RequestMapping("/Airview")
-//    public String show(){return"Airview";}
+
+    @RequestMapping("/Airview")
+    public String show(){return"Airview";}
 
 //    @PostMapping("/airsave")
 //    public boolean save(@RequestBody AirBean airbean){return airService.save(airbean)};
