@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.airplan_demo.mapper.AirMapper">
+<!--    查询所有的数据-->
+    <select id="getAll"  resultType="java.util.Map">
+        select  * from table_fight;
+    </select>
+
+<!--    按照航班号来查询-->
+    <select id="select"  parameterType="String" resultType="com.example.airplan_demo.bean.AirBean">
+        select  * from table_fight where fight_no=#{fight_no};
+    </select>
+
+<!--    按照日期来查询-->
+    <select id="selectlisttime"  parameterType="Date" resultType="java.util.Map">
+        select  * from table_fight where date(plan_departure_time)=date(#{date});
+    </select>
+
+    <!--    插入数据-->
+    <select id="save"  parameterType="com.example.airplan_demo.bean.AirBean" resultType="boolean">
+        insert into table_fight (fight_no, fight_firm, air_model, start_place, end_place, Stopover_place, plan_departure_time,
+                                 departure_time, plan_arrival_time, arrival_time, terminal, check_in_counters)
+        values (#{airbean}.getFight_no(),#{airbean}.getFight_firm(),
+                #{airbean}.getAir_model(),#{airbean}.getStart_place(),
+                #{airbean}.getEnd_place(),#{airbean}.getStopover_place(),#{airbean}.etPlan_departure_time(),
+                #{airbean}.getDeparture_time(),#{airbean}.getPlan_arrival_time(),#{airbean}.getArrival_time(),
+                #{airbean}.getTerminal(),#{airbean}.getCheck_in_counters(),
+                );
+    </select>
+
+    <select id="updata"  parameterType="com.example.airplan_demo.bean.AirBean" resultType="boolean">
+        update table_fight
+            set fight_firm=#{airbean}.getFight_firm(),
+                air_model=#{airbean}.getAir_model(),start_place=#{airbean}.getStart_place(),
+                end_place=#{airbean}.getEnd_place(),Stopover_place=#{airbean}.getStopover_place(),
+                plan_departure_time=#{airbean}.getPlan_departure_time(),
+                departure_time=#{airbean}.getDeparture_time(),plan_arrival_time=#{airbean}.getPlan_arrival_time(),
+                arrival_time=#{airbean}.getArrival_time(),
+                terminal=#{airbean}.getTerminal(),check_in_counters=#{airbean}.getCheck_in_counters()
+    where fight_no=#{airbean}.getFight_no();
+    </select>
+
+    <!--    按照航班号删除-->
+    <delete id="delete"  parameterType="String">
+        delete  from table_fight where fight_no=#{fight_no};
+    </delete>
+
+</mapper>

@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    name: airplan
+    url: jdbc:mysql://localhost:3306/airplan?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublickeyRetrieval=true&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: Herry
+    password: "000000"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #??????
+  type-aliases-package: com.example.airplan_demo.bean
