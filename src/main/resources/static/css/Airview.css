@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+
+}
+li{
+    list-style: none;
+}
+.main{
+    background-color: dimgrey;
+}
+.app-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+}
+.menu-h{
+    display: flex;
+}
+.menu-h li{
+    display: inline-block;
+    margin:20px;
+}
+.main-table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-table tr td{
+    padding:20px;
+    align-items: center;
+    justify-content: center;
+}
