@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>航空管理系统</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/book_ticket.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/comment.css">
+    <link rel="stylesheet" type="text/css" href="/css/Airview1.css">
+</head>
+<body>
+<!-- S=标题 -->
+<header id="title">
+    <div class="title_content">
+        <div class="float_l ">
+            <ul >
+                <li><a href="#">已登录</a></li>
+                <li><a href="#" class="register_btn">注册</a></li>
+            </ul>
+        </div>
+        <div class="float_r">
+            <ul>
+                <li><a href="myflight.html">我的航班</a></li><span class="title_line"></span>
+                <li><a href="#">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- E=标题 -->
+<!-- S-搜索栏 -->
+<div id="search">
+    <div class="search_wrapper float_r">
+        <input type="text" name="" value="" placeholder="请输入关键字" class="search_bar float_l"><input type="submit" name="" value="搜索" class="search_btn float_l white">
+    </div>
+</div>
+<!-- E-搜索栏 -->
+<!-- S-导航栏 -->
+<nav id="nav">
+    <ul class="font16px">
+        <li class="nav_tag"><a href="index.htm">首页</a></li><li class="nav_tag">
+        <a href="#">预定行程</a></li><li class="nav_tag">
+        <a href="#">服务大厅</a></li><li class="nav_tag">
+        <a href="#">停班时间</a></li><li class="nav_tag">
+        <a href="#">购票安全</a></li><li class="nav_tag">
+        <a href="#">出行帮助</a></li>
+    </ul>
+</nav>
+
+<div class="main">
+    <div class="app-wrap">
+        <div class="logo">
+            <p>欢迎来到航班管家</p>
+        </div>
+        <ul class="menu-h">
+            <li class="curr"><span>数据业务</span></li>
+            <li class="curr"><span>航线网络图</span></li>
+            <li class="curr"><span>关于我们</span></li>
+        </ul>
+    </div>
+    <div class="sss">
+        <button id="select" onclick="display()">查询所有数据</button>
+        <button id="btn2" onclick="test1()">查询</button>
+        <input id="fight_no" type="text"  placeholder="请输入航班号" >
+        <button id="btn3" onclick="test3()">按照地点查询</button>
+        <input id="start_place" type="text"  placeholder="出发地点" >
+        <input id="end_place" type="text"  placeholder="到达地点" >
+    </div>
+    <div class="main-table">
+        <table class="table">
+            <th>
+            <td>航班号</td>
+            <td>航空公司</td>
+            <td>飞机型号</td>
+            <td>起飞地点</td>
+            <td>到达地点</td>
+            <td>经停</td>
+            <td>计划起飞时间</td>
+            <td>实际起飞时间</td>
+            <td>计划到达时间</td>
+            <td>实际到达时间</td>
+            <td>航站楼</td>
+            <td>值机柜台</td>
+            </th>
+        </table>
+    </div>
+</div>
+
+<script src="/js/jQuery3.6.1.js"></script>
+<script src="/js/main.js"></script>
+<script type="text/javascript" src="/js/Airview.js"></script>
+</body>
+</html>

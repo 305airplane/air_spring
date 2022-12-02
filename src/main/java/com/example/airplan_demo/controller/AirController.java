@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -43,6 +44,24 @@ public class AirController {
         String msg=airBeans!=null ?"":"查询失败，请重试";
         return new Result(code,airBeans,msg) ;
     }
+    @RequestMapping("/selectbydate")
+    @ResponseBody
+    public Result selectdate(Date plan_departure_time){
+        System.out.println(plan_departure_time);
+        List<AirBean> airBean=airService.selectlisttime(plan_departure_time);
+        Integer code=airBean!=null ? Code.GET_OK:Code.GET_ERR;
+        String msg=airBean!=null ?"":"查询失败，请重试";
+        return new Result(code,airBean,msg) ;
+    }
+
+    @RequestMapping("/selectbypart")
+    @ResponseBody
+    public Result selectpart(String start_place,String end_place){
+        List<AirBean> airBean=airService.selectpart(start_place,end_place);
+        Integer code=airBean!=null ? Code.GET_OK:Code.GET_ERR;
+        String msg=airBean!=null ?"":"查询失败，请重试";
+        return new Result(code,airBean,msg) ;
+    }
 
     @RequestMapping("/save")
     @ResponseBody
@@ -55,7 +74,6 @@ public class AirController {
     @ResponseBody
     public  Result delete(String fight_no){
         boolean flag=airService.delete(fight_no);
-
         return new Result(flag ? Code.DELETE_OK:Code.DELETE_ERR,flag);
     }
 

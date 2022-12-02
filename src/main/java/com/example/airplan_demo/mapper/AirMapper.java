@@ -16,6 +16,8 @@ public interface AirMapper {
 
     List<AirBean> selectlisttime(Date date);
 
+    List<AirBean> selectlistpart(String start_place,String end_place);
+
     //插入数据
     int save(AirBean airBean);
 

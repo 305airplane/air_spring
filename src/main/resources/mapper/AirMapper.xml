@@ -16,6 +16,11 @@
         select  * from table_fight where date(plan_departure_time)=date(#{date});
     </select>
 
+    <!--    按照地点来查询-->
+    <select id="selectlistpart"  parameterType="String" resultType="java.util.Map">
+        select  * from table_fight where start_place=#{start_place}and end_place=#{end_place};
+    </select>
+
     <!--    插入数据-->
     <select id="save"  parameterType="com.example.airplan_demo.bean.AirBean" resultType="boolean">
         insert into table_fight (fight_no, fight_firm, air_model, start_place, end_place, Stopover_place, plan_departure_time,

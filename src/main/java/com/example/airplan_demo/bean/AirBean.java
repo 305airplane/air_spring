@@ -13,16 +13,16 @@ public class AirBean {
     private String start_place;
     private String end_place;
     private String Stopover_place;
-    @DateTimeFormat(pattern = "yyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+8")
     private Date plan_departure_time;
-    @DateTimeFormat(pattern = "yyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+8")
     private Date departure_time;
-    @DateTimeFormat(pattern = "yyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+8")
     private Date plan_arrival_time;
-    @DateTimeFormat(pattern = "yyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+8")
     private Date arrival_time;
     private String terminal;

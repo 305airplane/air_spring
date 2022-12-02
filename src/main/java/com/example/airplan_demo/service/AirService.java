@@ -16,6 +16,9 @@ public interface AirService {
     //按照出发时间查找
     public List<AirBean> selectlisttime(Date date);
 
+    //按照出地点查找
+    public List<AirBean> selectpart(String start_place,String end_place);
+
     //插入数据
     public boolean save(AirBean airBean);
 

@@ -27,10 +27,16 @@ public class AirServiceImpl implements AirService {
         return airMapper.selectlisttime(date);
     }
 
+    @Override //按照地点查找数据
+    public List<AirBean> selectpart(String start_place,String end_place) {
+        return airMapper.selectlistpart(start_place,end_place);
+    }
+
     @Override
     public boolean save(AirBean airBean) {
         return airMapper.save(airBean)>0;
     }
+
 
     @Override
     public boolean updata(AirBean airBean) {

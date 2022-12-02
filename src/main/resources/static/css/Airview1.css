@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+.main{
+    height: 800px;
+}
+.app-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+}
+.menu-h{
+    display: flex;
+}
+.menu-h li{
+    display: inline-block;
+    margin:20px;
+}
+.sss{
+    margin-left: 200px;
+}
+.main-table{
+    margin-left: 20px;
+}
+.main-table tr td{
+    border: 1px solid #40B5E2;
+    text-align: center;
+    padding: 20px 0;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+#select{
+    height: 50px;
+    width: 150px;
+    margin:30px;
+    background-color: darkgoldenrod;
+}
