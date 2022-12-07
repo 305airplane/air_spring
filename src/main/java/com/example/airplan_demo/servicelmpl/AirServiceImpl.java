@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -15,7 +16,7 @@ public class AirServiceImpl implements AirService {
     private AirMapper airMapper;
 
     @Override
-    public List<AirBean> getAll(){return airMapper.getAll();}
+    public List<HashMap<String,String>> getAll(){return airMapper.getAll();}
 
     @Override //按照航班号查找数据
     public AirBean select(String fight_no) {

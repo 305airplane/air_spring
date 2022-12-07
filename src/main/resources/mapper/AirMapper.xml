@@ -3,7 +3,7 @@
 <mapper namespace="com.example.airplan_demo.mapper.AirMapper">
 <!--    查询所有的数据-->
     <select id="getAll"  resultType="java.util.Map">
-        select  * from table_fight;
+        select  * from airplan.`v_airplan`;
     </select>
 
 <!--    按照航班号来查询-->

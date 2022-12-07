@@ -3,12 +3,13 @@ package com.example.airplan_demo.service;
 import com.example.airplan_demo.bean.AirBean;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public interface AirService {
 
     //查询所有
-    public List<AirBean> getAll();
+    public List<HashMap<String,String>> getAll();
 
     //按航班号查找
     public AirBean select(String fight_no);

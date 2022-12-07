@@ -60,7 +60,7 @@
         </ul>
     </div>
     <div class="sss">
-        <button id="select" onclick="display()">查询所有数据</button>
+        <button id="select" onclick="go()">查询所有数据</button>
         <button id="btn2" onclick="test1()">查询</button>
         <input id="fight_no" type="text"  placeholder="请输入航班号" >
         <button id="btn3" onclick="test3()">按照地点查询</button>
@@ -69,20 +69,13 @@
     </div>
     <div class="main-table">
         <table class="table">
-            <th>
-            <td>航班号</td>
-            <td>航空公司</td>
-            <td>飞机型号</td>
-            <td>起飞地点</td>
-            <td>到达地点</td>
-            <td>经停</td>
-            <td>计划起飞时间</td>
-            <td>实际起飞时间</td>
-            <td>计划到达时间</td>
-            <td>实际到达时间</td>
-            <td>航站楼</td>
-            <td>值机柜台</td>
-            </th>
+            <thead><td>航班号</td><td>航空公司</td><td>飞机型号</td>
+            <td>起飞地点</td><td>到达地点</td><td>经停</td><td>计划起飞时间</td>
+            <td>实际起飞时间</td><td>计划到达时间</td><td>实际到达时间</td>
+            <td>航站楼</td><td>值机柜台</td><td>航班状态</td><td>出港状态</td>
+            <td>进港状态</td>
+            </thead>
+            <tbody id="tb"></tbody>
         </table>
     </div>
 </div>

@@ -17,9 +17,4 @@ import java.util.List;
 class SpringbootdemoApplicationTests {
     @Resource
     AirService airService;
-    @Test
-    void contextLoads(){
-        List<AirBean> airBeans=airService.getAll();
-        System.out.println(airBeans);
-    }
 }

@@ -22,7 +22,7 @@ public class AirBean {
 //    @DateTimeFormat(pattern = "yyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+8")
     private Date plan_arrival_time;
-//    @DateTimeFormat(pattern = "yyy-MM-dd")
+    @DateTimeFormat(pattern = "yyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+8")
     private Date arrival_time;
     private String terminal;

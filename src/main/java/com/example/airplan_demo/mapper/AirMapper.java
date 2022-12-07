@@ -4,13 +4,15 @@ import com.example.airplan_demo.bean.AirBean;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Handler;
 
 @Mapper
 public interface AirMapper {
 
     //查询所有
-    List<AirBean> getAll();
+    List<HashMap<String,String>> getAll();
 
     AirBean select(String fight_no);
 

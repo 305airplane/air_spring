@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -39,7 +40,7 @@ public class AirController {
     @RequestMapping("/selectall")
     @ResponseBody
     public Result loginMethod(){
-        List<AirBean> airBeans= airService.getAll();
+        List<HashMap<String,String>> airBeans= airService.getAll();
         Integer code=airBeans!=null ? Code.GET_OK:Code.GET_ERR;
         String msg=airBeans!=null ?"":"查询失败，请重试";
         return new Result(code,airBeans,msg) ;
